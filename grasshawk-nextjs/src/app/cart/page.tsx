@@ -1,15 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import { ShoppingBag, ArrowRight, Truck, MapPin, Lock, Leaf, Rocket } from 'lucide-react';
+import { ShoppingBag, ArrowRight, MapPin, Lock, Leaf } from 'lucide-react';
 import CartItem from '@/components/ui/CartItem';
 import { useCartStore } from '@/store/cartStore';
 
 export default function CartPage() {
-  const { items, subtotal, tax, shipping, total } = useCartStore();
+  const { items, subtotal, shipping, total } = useCartStore();
 
   const sub = subtotal();
-  const taxAmt = tax();
   const shipAmt = shipping();
   const totalAmt = total();
 
